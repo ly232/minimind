@@ -4,6 +4,10 @@ Run with:
 
   uv run playground/inference.py
 
+  or
+
+  python3 playground/inference.py
+
 Example output:
 
 == results ==
