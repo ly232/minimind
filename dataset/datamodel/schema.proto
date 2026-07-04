@@ -1,0 +1,24 @@
+// Schema proto inferred from minimind jsonl files.
+//
+// To regenerate python stubs, run:
+//
+// python -m grpc_tools.protoc -I. --python_out=./generated ./dataset/datamodel/schema.proto
+
+syntax = "proto3";
+
+package minimind.dataset.datamodel.schema;
+
+// Schema inferred from sft_t2t_mini.jsonl
+message SupervisedFineTuningSample {
+    message Conversation {
+        string role = 1;
+        string content = 2;
+        string reasoning_content = 3;
+    }
+    repeated Conversation converstaions = 1;
+}
+
+// Schema inferred from pretrain_t2t_mini.jsonl
+message PretrainSample {
+    string text = 1;
+}
